@@ -54,5 +54,30 @@ fun main(args: Array<String>) {
         """
     println(str2)
 
+    /**
+     * trimMargin() 去除前导空格，默认使用"|"作为边界字符
+     * trimIndent() 把字符串左边空白对其切割
+     */
+    val text = """
+        |理论是你知道怎么样，但它却不好用，
+        |实践是它很好用，但你不知道为什么。
+        |程序将理论和实践结合起来。
+        |既不好用也不知道为什么
+        """
+    println(text.trimMargin("|"))
+
+    val text2 = """
+                Hello
+            World
+    """.trimIndent()
+    println(text2)
+
+    /**
+     * 字符串模板
+     *  - 在字符串中输出字符"$"，使用如下格式:${'$'}
+     */
+    val s = "abc"
+    println("$s length is ${s.length}")
+    println("${'$'}4.99") // $4.99
 
 }
