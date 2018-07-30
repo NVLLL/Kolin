@@ -297,11 +297,10 @@ fun main(args: Array<String>) {
 
 
     /**
-     * 集合操作：
-     *  - take
-     *    * take(n: Int): List<T>、takeLast(n: Int): List<T>  返回集合前/后n个元素组成的子集； 如果n=0，返回空集；如果n>size,返回该集合
-     *    * takeWhile(predicate: (T) -> Boolean): List<T>
-     *      takeLastWhile(predicate: (T) -> Boolean): List<T>  返回满足条件的元素构成的子集。当遇到不满足条件的元素，终止操作
+     * take
+     *  - take(n: Int): List<T>、takeLast(n: Int): List<T>  返回集合前/后n个元素组成的子集； 如果n=0，返回空集；如果n>size,返回该集合
+     *  - takeWhile(predicate: (T) -> Boolean): List<T>
+     *    takeLastWhile(predicate: (T) -> Boolean): List<T>  返回满足条件的元素构成的子集。当遇到不满足条件的元素，终止操作
      */
     println("============================ take ==========================")
     val tList = listOf("a","b","c","d")
@@ -311,11 +310,10 @@ fun main(args: Array<String>) {
     tList.takeLast(3) // ["b","c","d"]
 
     /**
-     * 集合操作：
-     *  - drop
-     *    * drop(n: Int): List<T>、dropLast(n: Int): List<T> 删除集合前/后n个元素，返回剩下元素构成的子集
-     *    * dropWhile(predicate: (T) -> Boolean): List<T>
-     *      dropLastWhile(predicate: (T) -> Boolean): List<T> 删除满足条件的元素，返回剩下元素构成的子集。当遇到不满足条件的元素，终止操作
+     *  drop
+     *   - drop(n: Int): List<T>、dropLast(n: Int): List<T> 删除集合前/后n个元素，返回剩下元素构成的子集
+     *   - dropWhile(predicate: (T) -> Boolean): List<T>
+     *     dropLastWhile(predicate: (T) -> Boolean): List<T> 删除满足条件的元素，返回剩下元素构成的子集。当遇到不满足条件的元素，终止操作
      */
     println("============================ drop ==========================")
     println(tList.drop(2)) // ["c","d"]
@@ -325,10 +323,9 @@ fun main(args: Array<String>) {
     println(dList.dropWhile { it % 2 == 0 }) // [5,6,8,9]
 
     /**
-     * 集合操作：
-     *  - slice
-     *    * slice(indices: IntRange): List<T> 截取indices(下标范围)上的元素
-     *    * slice(indices: Iterable<Int>): List<T> 截取indices(下标集合)上的元素
+     * slice
+     *  - slice(indices: IntRange): List<T> 截取indices(下标范围)上的元素
+     *  - slice(indices: Iterable<Int>): List<T> 截取indices(下标集合)上的元素
      */
     val slList = listOf(1,3,4,5,6,7)
     println(slList.slice(1..3)) // [3,4,5]
